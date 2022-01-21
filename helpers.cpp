@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+#include <algorithm>
 
 // https://stackoverflow.com/questions/9158150/colored-output-in-c#9158263
 #define RESET   "\033[0m"
@@ -39,4 +40,8 @@ void printMap(std::unordered_map<int, int> toprint) {
 	for (const auto& element : toprint) {
 		std::cout << element.first << " - " << element.second << std::endl;
 	}
+}
+
+void answerPrint(int answer) {
+  std::cout << RED << answer << RESET << std::endl;
 }
