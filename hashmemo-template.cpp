@@ -1,20 +1,11 @@
-#include <iostream>
-#include <vector>
 #include <map>
 #include <algorithm>
+#include "helpers.cpp"
 
 // placeholder that will function, just have to replace before submit
 #define LEET_CODE_FUNCTION climbStairs
 
 using namespace std;
-
-// helper
-void printVec(vector<int> toprint) {
-  for (int i = 0; i < toprint.size(); i++) {
-    cout << toprint[i] << " ";
-  }
-  cout << endl;
-}
 
 // solution
 class Solution {
@@ -35,7 +26,6 @@ public:
 		return num;
 	}
 };
-
 
 // tests
 int main(){
