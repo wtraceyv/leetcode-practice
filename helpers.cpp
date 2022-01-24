@@ -75,7 +75,8 @@ void printVec(std::vector<int> toprint, int indexHighlight) {
 }
 
 // print basic <int, int> map
-void printMap(std::unordered_map<int, int> toprint) {
+template<typename K, typename V>
+void printMap(std::unordered_map<K, V> toprint) {
   for (const auto &element : toprint) {
     std::cout << element.first << " - " << element.second << std::endl;
   }
