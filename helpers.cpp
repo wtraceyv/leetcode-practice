@@ -3,6 +3,7 @@
 #include <iterator>
 #include <ostream>
 #include <unordered_map>
+#include <map>
 #include <vector>
 
 // https://stackoverflow.com/questions/9158150/colored-output-in-c#9158263
@@ -54,7 +55,8 @@ void printLinkedList(ListNode *head) {
 /* * printing various things * * * * * */
 
 // print vec as array simply
-void printVec(std::vector<int> toprint) {
+template<typename V>
+void printVec(std::vector<V> toprint) {
   std::cout << "[";
   for (int i = 0; i < toprint.size(); i++) {
     std::cout << toprint[i] << " ";
@@ -63,7 +65,8 @@ void printVec(std::vector<int> toprint) {
 }
 
 // option to highlight current index
-void printVec(std::vector<int> toprint, int indexHighlight) {
+template<typename V>
+void printVec(std::vector<V> toprint, int indexHighlight) {
   std::cout << "[";
   for (int i = 0; i < toprint.size(); i++) {
     if (i == indexHighlight)
@@ -77,6 +80,13 @@ void printVec(std::vector<int> toprint, int indexHighlight) {
 // print basic <int, int> map
 template<typename K, typename V>
 void printMap(std::unordered_map<K, V> toprint) {
+  for (const auto &element : toprint) {
+    std::cout << element.first << " - " << element.second << std::endl;
+  }
+}
+
+template<typename K, typename V>
+void printMap(std::map<K, V> toprint) {
   for (const auto &element : toprint) {
     std::cout << element.first << " - " << element.second << std::endl;
   }
