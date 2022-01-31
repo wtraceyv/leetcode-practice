@@ -2,12 +2,6 @@
 
 using namespace std;
 
-struct ListNode {
-  int val;
-  ListNode *next;
-  ListNode(int x) : val(x), next(NULL) {}
-};
-
 // "Floyd's cycle algorithm" / tortoise and hare 
 // kind of my naive idea to begin with
 // There are 'shorter' ways, but they all do the same thing. using fast->next->next, etc., I just wanted it to work
