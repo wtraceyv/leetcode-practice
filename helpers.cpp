@@ -30,7 +30,7 @@ struct ListNode {
 /* Generate linear linked list with values of nums given.
  * Return head of this list.
  */
-ListNode *genList(std::vector<int> nums) {
+ListNode *genList(const std::vector<int> &nums) {
   ListNode *save = new ListNode(nums[0]);
   ListNode *head = save;
   for (int n = 0; n < nums.size(); n++) {
@@ -56,7 +56,7 @@ void printLinkedList(ListNode *head) {
 
 // print vec as array simply
 template<typename V>
-void printVec(std::vector<V> toprint) {
+void printVec(const std::vector<V> &toprint) {
   std::cout << "[";
   for (int i = 0; i < toprint.size(); i++) {
     std::cout << toprint[i] << " ";
@@ -66,7 +66,7 @@ void printVec(std::vector<V> toprint) {
 
 // option to highlight current index
 template<typename V>
-void printVec(std::vector<V> toprint, int indexHighlight) {
+void printVec(const std::vector<V> &toprint, int indexHighlight) {
   std::cout << "[";
   for (int i = 0; i < toprint.size(); i++) {
     if (i == indexHighlight)
@@ -77,21 +77,21 @@ void printVec(std::vector<V> toprint, int indexHighlight) {
   std::cout << "]" << std::endl;
 }
 
-// print basic <int, int> map
 template<typename K, typename V>
-void printMap(std::unordered_map<K, V> toprint) {
+void printMap(const std::unordered_map<K, V> &toprint) {
   for (const auto &element : toprint) {
     std::cout << element.first << " - " << element.second << std::endl;
   }
 }
 
 template<typename K, typename V>
-void printMap(std::map<K, V> toprint) {
+void printMap(const std::map<K, V> &toprint) {
   for (const auto &element : toprint) {
     std::cout << element.first << " - " << element.second << std::endl;
   }
 }
 
-void answerPrint(int answer) {
+template<typename T>
+void answerPrint(T answer) {
   std::cout << RED << answer << RESET << std::endl;
 }
