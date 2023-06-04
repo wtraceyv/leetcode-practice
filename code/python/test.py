@@ -1,8 +1,3 @@
+# Height of 'rocks' for water to pool around
+height = [0,1,0,2,1,0,1,3,2,1,2,1]
 
-rowCheck = [{} for chunk in range(9)]
-rowCheck[2][1] = 1
-
-for row in range(9):
-  print('yo')
-
-print(rowCheck)
